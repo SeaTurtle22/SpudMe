@@ -8,7 +8,8 @@
 import UIKit
 
 class ViewController: UIViewController {
-//hello
+    @IBOutlet var chosephoto: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         //Hi Cedar!
