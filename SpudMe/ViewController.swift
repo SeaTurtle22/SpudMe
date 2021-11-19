@@ -10,6 +10,7 @@ import Photos
 import PhotosUI
 
 class ViewController: UIViewController,PHPickerViewControllerDelegate{
+    @IBOutlet var frame: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
         //Hi Cedar!
