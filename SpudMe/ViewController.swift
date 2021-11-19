@@ -10,7 +10,10 @@ import Photos
 import PhotosUI
 
 class ViewController: UIViewController,PHPickerViewControllerDelegate{
-    @IBOutlet var chosephoto: UIButton!
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        //Hi Cedar!
+    }
     @IBAction func chosephoto(_ sender: Any) {
     var config = PHPickerConfiguration(photoLibrary: .shared())
         config.selectionLimit = 1
@@ -30,10 +33,7 @@ class ViewController: UIViewController,PHPickerViewControllerDelegate{
         }
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        //Hi Cedar!
-    }
+
 
 
 }
