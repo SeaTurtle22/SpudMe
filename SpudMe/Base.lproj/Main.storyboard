@@ -29,7 +29,7 @@
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Jsp-Yb-wdq" userLabel="Photo Display">
-                                <rect key="frame" x="16" y="163" width="343" height="462"/>
+                                <rect key="frame" x="16" y="163" width="343" height="486"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
                         </subviews>
