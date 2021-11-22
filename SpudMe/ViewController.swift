@@ -6,36 +6,48 @@
 //
 
 import UIKit
-import Photos
 import PhotosUI
 
-class ViewController: UIViewController,PHPickerViewControllerDelegate{
-    @IBOutlet var frame: UIImageView!
+class ViewController: UIViewController {
+    @IBOutlet var imageView: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        //Hi Cedar!
+        // Do any additional setup after loading the view.
     }
-    @IBAction func chosephoto(_ sender: Any) {
-    var config = PHPickerConfiguration(photoLibrary: .shared())
-        config.selectionLimit = 1
-        config.filter = .images
-        let vc = PHPickerViewController(configuration:config)
-        vc.delegate = self
-    present(vc, animated: true)
+    
+    private func presentPicker() {
+        var configuration = PHPickerConfiguration()
+        configuration.filter = .images
+        configuration.selectionLimit = 1
+        configuration.preferredAssetRepresentationMode = .automatic
+        let picker = PHPickerViewController(configuration: configuration)
+        picker.delegate = self
+        present(picker, animated: true)
     }
+
+    @IBAction func openPicker(_ sender: UIButton) {
+        presentPicker()
+    }
+    
+}
+
+extension ViewController: PHPickerViewControllerDelegate  {
     func picker(_ picker: PHPickerViewController, didFinishPicking results: [PHPickerResult]) {
-        picker.dismiss(animated: true, completion: nil)
-        results.forEach { result in
-            result.itemProvider.loadObject(ofClass: UIImage.self) {reading, error in
-                guard let image = reading as? UIImage, error == nil else{
-                    return
+        dismiss(animated: true)
+        let itemProviders = results.map(\.itemProvider)
+        for item in itemProviders {
+            if item.canLoadObject(ofClass: UIImage.self) {
+                item.loadObject(ofClass: UIImage.self) { (image, error) in
+                    DispatchQueue.main.async {
+                        if let image = image as? UIImage {
+                            //Access your image
+                            self.imageView.image = nil
+                            self.imageView.image = image
+                        }
+                    }
                 }
             }
         }
     }
-    
-
-
-
 }
-
