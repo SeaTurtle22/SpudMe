@@ -1,0 +1,10 @@
+Target dependency graph (5 targets)
+CropViewController-TOCropViewControllerBundle in Pods, no dependencies
+CropViewController in Pods, depends on:
+CropViewController-TOCropViewControllerBundle in Pods (explicit)
+Pods-SpudMe in Pods, depends on:
+CropViewController in Pods (explicit)
+Pods-SpudMe-SpudMeUITests in Pods, depends on:
+CropViewController in Pods (explicit)
+Pods-SpudMeTests in Pods, depends on:
+Pods-SpudMe in Pods (explicit)

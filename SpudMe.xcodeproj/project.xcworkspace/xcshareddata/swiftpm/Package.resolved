@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "TOCropViewController",
+        "repositoryURL": "https://github.com/TimOliver/TOCropViewController.git",
+        "state": {
+          "branch": "main",
+          "revision": "b7b3d0698e8314296abac1e838bfbe1fc77b4384",
+          "version": null
+        }
+      }
+    ]
+  },
+  "version": 1
+}

@@ -1,0 +1,58 @@
+{
+  "_buildCommand2" : {
+    "command" : "prepareForIndexing",
+    "enableIndexBuildArena" : false,
+    "targets" : null
+  },
+  "buildCommand" : "build",
+  "configuredTargets" : [
+    {
+      "guid" : "bfdfe7dc352907fc980b868725387e9812277fd9a351c841c3696036f1a4462d"
+    },
+    {
+      "guid" : "bfdfe7dc352907fc980b868725387e98e57c24c9bf7d47117e80f38445e5bc3b"
+    },
+    {
+      "guid" : "bfdfe7dc352907fc980b868725387e982ee404ab4c1834acea50bdb8dba398e2"
+    },
+    {
+      "guid" : "bfdfe7dc352907fc980b868725387e98ca849805c1b11f6d46873213970c616d"
+    },
+    {
+      "guid" : "bfdfe7dc352907fc980b868725387e98bc1b32d1718e2055dc04c733a48f16f2"
+    }
+  ],
+  "containerPath" : "/Users/chester128/Documents/SpudMe/Pods/Pods.xcodeproj",
+  "continueBuildingAfterErrors" : true,
+  "enableIndexBuildArena" : false,
+  "hideShellScriptEnvironment" : false,
+  "parameters" : {
+    "action" : "build",
+    "arenaInfo" : {
+      "buildIntermediatesPath" : "",
+      "buildProductsPath" : "",
+      "derivedDataPath" : "/Users/chester128/Library/Developer/Xcode/DerivedData",
+      "indexDataStoreFolderPath" : "/Users/chester128/Library/Developer/Xcode/DerivedData/Pods-hakbiociskfmeybgveygqtjynoae/Index/DataStore",
+      "indexEnableDataStore" : true,
+      "indexPCHPath" : "/Users/chester128/Library/Developer/Xcode/DerivedData/Pods-hakbiociskfmeybgveygqtjynoae/Index/PrecompiledHeaders",
+      "pchPath" : ""
+    },
+    "configurationName" : "Release",
+    "overrides" : {
+      "synthesized" : {
+        "table" : {
+          "ENABLE_PREVIEWS" : "NO"
+        }
+      }
+    }
+  },
+  "qos" : "default",
+  "schemeCommand" : "launch",
+  "schemeCommand2" : "launch",
+  "shouldCollectMetrics" : false,
+  "showNonLoggedProgress" : true,
+  "useDryRun" : true,
+  "useImplicitDependencies" : false,
+  "useLegacyBuildLocations" : false,
+  "useParallelTargets" : false
+}
