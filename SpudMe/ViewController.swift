@@ -7,6 +7,7 @@
 
 import UIKit
 import PhotosUI
+import CropViewController
 
 class ViewController: UIViewController {
     @IBOutlet var imageView: UIImageView!
@@ -30,9 +31,11 @@ class ViewController: UIViewController {
         presentPicker()
     }
     
+   
+    
 }
 
-extension ViewController: PHPickerViewControllerDelegate  {
+extension ViewController: PHPickerViewControllerDelegate, CropViewControllerDelegate  {
     func picker(_ picker: PHPickerViewController, didFinishPicking results: [PHPickerResult]) {
         dismiss(animated: true)
         let itemProviders = results.map(\.itemProvider)
@@ -44,10 +47,23 @@ extension ViewController: PHPickerViewControllerDelegate  {
                             //Access your image
                             self.imageView.image = nil
                             self.imageView.image = image
+                            let cropViewController = CropViewController(image: image)
+                            cropViewController.delegate = self
+                            self.present(cropViewController, animated: true, completion: nil)
                         }
                     }
                 }
             }
         }
+     
+    }
+   
+
+    func cropViewController(_ cropViewController: CropViewController, didCropToImage imageNew : UIImage, withRect cropRect: CGRect, angle: Int) {
+            // 'image' is the newly cropped version of the original image
+        
+    }
+    @IBAction func goToCrop(_ sender: Any) {
+      //presentCropViewController(self.imageView.image: UIImage)
     }
 }

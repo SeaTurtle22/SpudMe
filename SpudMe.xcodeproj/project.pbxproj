@@ -16,6 +16,8 @@
 		D4CFE8FD2746D1FB00620B33 /* SpudMeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4CFE8FC2746D1FB00620B33 /* SpudMeTests.swift */; };
 		D4CFE9072746D1FB00620B33 /* SpudMeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4CFE9062746D1FB00620B33 /* SpudMeUITests.swift */; };
 		D4CFE9092746D1FB00620B33 /* SpudMeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4CFE9082746D1FB00620B33 /* SpudMeUITestsLaunchTests.swift */; };
+		E143B2D92751CBA50037129C /* CropViewController in Frameworks */ = {isa = PBXBuildFile; productRef = E143B2D82751CBA50037129C /* CropViewController */; };
+		E143B2DB2751CBA50037129C /* TOCropViewController in Frameworks */ = {isa = PBXBuildFile; productRef = E143B2DA2751CBA50037129C /* TOCropViewController */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +58,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E143B2DB2751CBA50037129C /* TOCropViewController in Frameworks */,
+				E143B2D92751CBA50037129C /* CropViewController in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -143,6 +147,10 @@
 			dependencies = (
 			);
 			name = SpudMe;
+			packageProductDependencies = (
+				E143B2D82751CBA50037129C /* CropViewController */,
+				E143B2DA2751CBA50037129C /* TOCropViewController */,
+			);
 			productName = SpudMe;
 			productReference = D4CFE8E22746D1F900620B33 /* SpudMe.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +223,9 @@
 				Base,
 			);
 			mainGroup = D4CFE8D92746D1F900620B33;
+			packageReferences = (
+				E143B2D72751CBA50037129C /* XCRemoteSwiftPackageReference "TOCropViewController" */,
+			);
 			productRefGroup = D4CFE8E32746D1F900620B33 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -624,6 +635,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		E143B2D72751CBA50037129C /* XCRemoteSwiftPackageReference "TOCropViewController" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/TimOliver/TOCropViewController.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		E143B2D82751CBA50037129C /* CropViewController */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E143B2D72751CBA50037129C /* XCRemoteSwiftPackageReference "TOCropViewController" */;
+			productName = CropViewController;
+		};
+		E143B2DA2751CBA50037129C /* TOCropViewController */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E143B2D72751CBA50037129C /* XCRemoteSwiftPackageReference "TOCropViewController" */;
+			productName = TOCropViewController;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = D4CFE8DA2746D1F900620B33 /* Project object */;
 }
