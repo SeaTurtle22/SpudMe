@@ -51,6 +51,7 @@
 		D4CFE9022746D1FB00620B33 /* SpudMeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SpudMeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4CFE9062746D1FB00620B33 /* SpudMeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpudMeUITests.swift; sourceTree = "<group>"; };
 		D4CFE9082746D1FB00620B33 /* SpudMeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpudMeUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		D4CFE918274D71C600620B33 /* TOCropViewController */ = {isa = PBXFileReference; lastKnownFileType = folder; name = TOCropViewController; path = ../TOCropViewController; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +84,7 @@
 		D4CFE8D92746D1F900620B33 = {
 			isa = PBXGroup;
 			children = (
+				D4CFE917274D71C600620B33 /* Packages */,
 				D4CFE8E42746D1F900620B33 /* SpudMe */,
 				D4CFE8FB2746D1FB00620B33 /* SpudMeTests */,
 				D4CFE9052746D1FB00620B33 /* SpudMeUITests */,
@@ -129,6 +131,14 @@
 				D4CFE9082746D1FB00620B33 /* SpudMeUITestsLaunchTests.swift */,
 			);
 			path = SpudMeUITests;
+			sourceTree = "<group>";
+		};
+		D4CFE917274D71C600620B33 /* Packages */ = {
+			isa = PBXGroup;
+			children = (
+				D4CFE918274D71C600620B33 /* TOCropViewController */,
+			);
+			name = Packages;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
