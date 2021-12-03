@@ -11,7 +11,6 @@ import CropViewController
 
 class ViewController: UIViewController {
     @IBOutlet var imageView: UIImageView!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -60,10 +59,15 @@ extension ViewController: PHPickerViewControllerDelegate, CropViewControllerDele
    
 
     func cropViewController(_ cropViewController: CropViewController, didCropToImage imageNew : UIImage, withRect cropRect: CGRect, angle: Int) {
-            // 'image' is the newly cropped version of the original image
+        updateImageViewWithImage(imageNew, fromCropViewController: cropViewController)
         
     }
-    @IBAction func goToCrop(_ sender: Any) {
-      //presentCropViewController(self.imageView.image: UIImage)
-    }
+    public func updateImageViewWithImage(_ image: UIImage, fromCropViewController cropViewController: CropViewController) {
+            imageView.image = image
+            //layoutImageView()
+            
+                self.imageView.isHidden = false
+                cropViewController.dismiss(animated: true, completion: nil)
+            
+        }
 }
