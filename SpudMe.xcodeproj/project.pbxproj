@@ -16,6 +16,8 @@
 		D4CFE8FD2746D1FB00620B33 /* SpudMeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4CFE8FC2746D1FB00620B33 /* SpudMeTests.swift */; };
 		D4CFE9072746D1FB00620B33 /* SpudMeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4CFE9062746D1FB00620B33 /* SpudMeUITests.swift */; };
 		D4CFE9092746D1FB00620B33 /* SpudMeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4CFE9082746D1FB00620B33 /* SpudMeUITestsLaunchTests.swift */; };
+		D4E29E4127A0868800D43637 /* TCMask.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4E29E3D27A085E500D43637 /* TCMask.framework */; };
+		D4E29E4227A0868800D43637 /* TCMask.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D4E29E3D27A085E500D43637 /* TCMask.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		E143B2D92751CBA50037129C /* CropViewController in Frameworks */ = {isa = PBXBuildFile; productRef = E143B2D82751CBA50037129C /* CropViewController */; };
 		E143B2DB2751CBA50037129C /* TOCropViewController in Frameworks */ = {isa = PBXBuildFile; productRef = E143B2DA2751CBA50037129C /* TOCropViewController */; };
 /* End PBXBuildFile section */
@@ -35,7 +37,35 @@
 			remoteGlobalIDString = D4CFE8E12746D1F900620B33;
 			remoteInfo = SpudMe;
 		};
+		D4E29E3C27A085E500D43637 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D4E29E3727A085E500D43637 /* TinyCrayon.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 7527FDA6270BED5700710086;
+			remoteInfo = TCMask;
+		};
+		D4E29E3E27A085E500D43637 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D4E29E3727A085E500D43637 /* TinyCrayon.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 7527FDC5270BEEA700710086;
+			remoteInfo = TCCore;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		D4E29E4327A0868800D43637 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				D4E29E4227A0868800D43637 /* TCMask.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		D4CFE8E22746D1F900620B33 /* SpudMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpudMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -52,6 +82,7 @@
 		D4CFE9062746D1FB00620B33 /* SpudMeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpudMeUITests.swift; sourceTree = "<group>"; };
 		D4CFE9082746D1FB00620B33 /* SpudMeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpudMeUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		D4CFE918274D71C600620B33 /* TOCropViewController */ = {isa = PBXFileReference; lastKnownFileType = folder; name = TOCropViewController; path = ../TOCropViewController; sourceTree = "<group>"; };
+		D4E29E3727A085E500D43637 /* TinyCrayon.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = TinyCrayon.xcodeproj; path = "../tinycrayon/TinyCrayon-iOS-SDK/TinyCrayon.xcodeproj"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +92,7 @@
 			files = (
 				E143B2DB2751CBA50037129C /* TOCropViewController in Frameworks */,
 				E143B2D92751CBA50037129C /* CropViewController in Frameworks */,
+				D4E29E4127A0868800D43637 /* TCMask.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -89,6 +121,7 @@
 				D4CFE8FB2746D1FB00620B33 /* SpudMeTests */,
 				D4CFE9052746D1FB00620B33 /* SpudMeUITests */,
 				D4CFE8E32746D1F900620B33 /* Products */,
+				D4E29E4027A0868800D43637 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -136,9 +169,26 @@
 		D4CFE917274D71C600620B33 /* Packages */ = {
 			isa = PBXGroup;
 			children = (
+				D4E29E3727A085E500D43637 /* TinyCrayon.xcodeproj */,
 				D4CFE918274D71C600620B33 /* TOCropViewController */,
 			);
 			name = Packages;
+			sourceTree = "<group>";
+		};
+		D4E29E3827A085E500D43637 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D4E29E3D27A085E500D43637 /* TCMask.framework */,
+				D4E29E3F27A085E500D43637 /* TCCore.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D4E29E4027A0868800D43637 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -151,6 +201,7 @@
 				D4CFE8DE2746D1F900620B33 /* Sources */,
 				D4CFE8DF2746D1F900620B33 /* Frameworks */,
 				D4CFE8E02746D1F900620B33 /* Resources */,
+				D4E29E4327A0868800D43637 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -238,6 +289,12 @@
 			);
 			productRefGroup = D4CFE8E32746D1F900620B33 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = D4E29E3827A085E500D43637 /* Products */;
+					ProjectRef = D4E29E3727A085E500D43637 /* TinyCrayon.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				D4CFE8E12746D1F900620B33 /* SpudMe */,
@@ -246,6 +303,23 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		D4E29E3D27A085E500D43637 /* TCMask.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = TCMask.framework;
+			remoteRef = D4E29E3C27A085E500D43637 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		D4E29E3F27A085E500D43637 /* TCCore.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = TCCore.framework;
+			remoteRef = D4E29E3E27A085E500D43637 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		D4CFE8E02746D1F900620B33 /* Resources */ = {
