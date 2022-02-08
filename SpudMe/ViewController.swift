@@ -8,8 +8,10 @@
 import UIKit
 import PhotosUI
 import CropViewController
+import TCCore
+import TCMask
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, TCMaskViewDelegate {
     @IBOutlet var imageView: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -68,6 +70,9 @@ extension ViewController: PHPickerViewControllerDelegate, CropViewControllerDele
             
                 self.imageView.isHidden = false
                 cropViewController.dismiss(animated: true, completion: nil)
+        let maskView = TCMaskView(image: image)
+        maskView.delegate = self
+        maskView.presentFrom(rootViewController: self, animated: true)
             
         }
 }
